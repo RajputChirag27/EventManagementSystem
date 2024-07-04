@@ -1,0 +1,94 @@
+.container {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #555;
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+}
+
+.chat-container {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0.25rem;
+    height: 50vh;
+    border: 1px solid #555;
+}
+
+.chat-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 300px; /* Example height; adjust as needed */
+    overflow-y: auto;
+}
+
+.chat-history li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    color: #ddd;
+}
+
+.chat-history .user-message {
+    background-color: #000000;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-history .ai-message {
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #555;
+}
+
+.user-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #666;
+    background-color: #444;
+    color: #ddd;
+    border-radius: 0.25rem;
+}
+
+.user-input button {
+    margin-left: 0.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    z-index: 1000; /* ensure it's on top of other elements */
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}

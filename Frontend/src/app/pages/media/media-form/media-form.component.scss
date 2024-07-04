@@ -1,0 +1,98 @@
+/* components/content-editor/content-editor.component.scss */
+.content-editor {
+    background-color: #000000;
+    color: #fbfdff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+
+    h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #343a40;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            background-color: #ffffff;
+            color: #343a40;
+
+            &:focus {
+                border-color: #80bdff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+        }
+
+        quill-editor {
+            .ql-container {
+                border-radius: 4px;
+                background-color: #ffffff;
+                color: #ffffff !important;
+                border: 1px solid #ced4da;
+            }
+
+            .ql-toolbar {
+                border-radius: 4px;
+                background-color: #e9ecef !important;
+                border: 1px solid #ced4da;
+                color: #ffffff !important;
+            }
+
+            .ql-editor {
+                min-height: 200px;
+                background-color: #ffffff;
+                color: #343a40;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 4px;
+        background-color: #0056b3;
+        color: #ffffff;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #004085;
+        }
+
+        &:active {
+            background-color: #004085;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    }
+}
+
+/* Ensure the toolbar color is set to a dark text for better visibility */
+.ql-toolbar {
+    color: #343a40 !important;
+}
+
+.quill-edits{
+    border-radius: 0.3rem;
+    background-color: #ffffff;
+    color: #000000;
+}

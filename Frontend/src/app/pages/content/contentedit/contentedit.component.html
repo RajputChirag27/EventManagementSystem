@@ -1,0 +1,19 @@
+<!-- components/content-editor/content-editor.component.html -->
+<div class="content-editor">
+  <h2 class="text-white">{{ articleId ? 'Edit Article' : 'Create Article' }}</h2>
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="title" class="text-white">Title</label>
+          <input id="title" formControlName="title" class="form-control" />
+      </div>
+      <div class="form-group quill-edits p-3 d-flex flex-column">
+          <label for="content" class="text-black">Content</label>
+          <quill-editor formControlName="content"></quill-editor>
+      </div>
+      <div class="form-group">
+          <label for="author" class="text-white">Author</label>
+          <input id="author" formControlName="author" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">{{ articleId ? 'Update' : 'Save' }}</button>
+  </form>
+</div>

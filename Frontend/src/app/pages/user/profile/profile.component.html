@@ -1,0 +1,20 @@
+<div class="container my-5" *ngIf="result">
+    <div class="card p-lg-5">
+        <div class="container-fluid d-flex justify-content-center">
+            <img class="card-img-top img-fluid m-5 rounded-5 profile-pic" 
+                 style="max-width: 20rem; max-height: 25rem;" 
+                 [src]="result.profilePicture || defaultProfile" 
+                 alt="Profile Picture">
+        </div>
+        <!-- {{result | json}} -->
+        <div class="card-body">
+            <h5 class="card-title">{{ result.username }}</h5>
+            <p class="card-text mt-3"><strong>Email: </strong>{{ result.email }}</p>
+            <p class="card-text"><strong>Role: </strong> {{ result.role }}</p>
+        </div>
+        <div class="card-body">
+            <button class="card-link btn btn-primary">Edit Profile</button>
+            <button class="card-link btn btn-primary">Change Password</button>
+        </div>
+    </div>
+</div>

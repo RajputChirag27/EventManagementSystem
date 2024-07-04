@@ -1,0 +1,29 @@
+.login-container {
+    max-width: 35rem;
+    margin: auto;   
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  
+  .btn-outline-primary {
+    color: #fff !important;
+    border-color: #fff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #fff;
+    color: #1e79d2 !important;
+  }
+
+
+  .btn-primary {
+    background: linear-gradient(90deg, #1e79d2, #1e79d4c2, #1e7ad681); 
+      border-color: #72b6ffce;
+  }

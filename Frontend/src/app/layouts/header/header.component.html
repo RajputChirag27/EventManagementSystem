@@ -1,0 +1,69 @@
+<nav class="navbar navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="home">Sasta Website</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sasta Form</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 my-3">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/home" routerLinkActive="active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/profile" routerLinkActive="active">Profile</a>
+              </li>
+              <li class="nav-item" *ngIf="isAdmin">
+                <a class="nav-link" routerLink="/pages/content/event" routerLinkActive="active">Create Event
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/about" routerLinkActive="active">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/content/dashboard" routerLinkActive="active">DashBoard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/chat" routerLinkActive="active">Chat with our AI
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+            <div class="container d-flex justify-content-center">
+              <button class="btn btn-primary mt-3" (click)="logout()">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

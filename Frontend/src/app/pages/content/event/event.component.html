@@ -1,0 +1,24 @@
+<!-- components/event-editor/event-editor.component.html -->
+<div class="event-editor">
+    <h2 class="text-white">{{ eventId ? 'Edit Event' : 'Create Event' }}</h2>
+    <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title" class="text-white">Title</label>
+        <input id="title" formControlName="title" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="description" class="text-white">Description</label>
+        <textarea id="description" formControlName="description" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date" class="text-white">Date</label>
+        <input id="date" type="datetime-local" formControlName="date" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="location" class="text-white">Location</label>
+        <input id="location" formControlName="location" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">{{ eventId ? 'Update' : 'Save' }}</button>
+    </form>
+  </div>
+  

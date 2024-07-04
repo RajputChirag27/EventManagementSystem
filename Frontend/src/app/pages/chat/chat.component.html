@@ -1,0 +1,32 @@
+<div class="container my-3">
+    <h2 class="text-light">Chat with our AI</h2>
+    <div class="container-fluid chat-container my-3 d-flex flex-column position-relative">
+        <div class="row flex-grow-1">
+            <div class="col-12 d-flex flex-column justify-content-end">
+                <ul class="chat-history list-group overflow-auto flex-grow-1">
+                    <li *ngFor="let message of chatHistory" [ngClass]="getMessageClass(message)">
+                        <markdown *ngIf="message.startsWith('AI:')" class="ai-response">
+                            {{formatAIResponse(message)}}
+                        </markdown>
+                        <div *ngIf="!message.startsWith('AI:')" class="user-message">
+                            {{ message }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="loading" class="loading-spinner">
+            <div class="spinner-border text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="chatForm" class="d-flex align-items-center user-input" (ngSubmit)="onSubmit()">
+                <input type="text" formControlName="userInput" class="form-control flex-grow-1" placeholder="Type your message...">
+                <button type="submit" class="btn btn-primary ms-2" [disabled]="loading">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

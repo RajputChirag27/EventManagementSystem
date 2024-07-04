@@ -1,0 +1,25 @@
+<div class="container content-editor mt-5">
+  <h2 class="mb-4 text-white">{{ editMode ? 'Edit Media' : 'Upload Media' }}</h2>
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title" required />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" formControlName="description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="tags" class="form-label">Tags</label>
+      <input type="text" class="form-control" id="tags" formControlName="tags" />
+      <small class="form-text text-muted">Separate tags with commas.</small>
+    </div>
+    <div class="mb-3" *ngIf="!editMode">
+      <label for="formFile" class="form-label">Select File</label>
+      <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)" required />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="uploadForm.invalid">
+      {{ editMode ? 'Update' : 'Upload' }}
+    </button>
+  </form>
+</div>

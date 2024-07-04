@@ -1,0 +1,10 @@
+<!-- otp-input.component.html -->
+<div class="otp-container d-flex flex-column justify-content-center align-items-center">
+    <h2>Enter OTP</h2>
+    <ng-otp-input 
+      [config]="otpConfig"
+      (onInputChange)="handleOtpChange($event)">
+    </ng-otp-input>
+    <button (click)="onSubmit()" class="btn btn-primary mt-3">Submit OTP</button>
+  </div>
+  
